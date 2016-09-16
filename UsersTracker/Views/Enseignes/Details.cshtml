@@ -1,0 +1,85 @@
+﻿@model UsersTracker.Entities.Enseigne
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <h4>Enseigne</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        </dl>
+
+    <dl class="dl-horizontal">
+        <h4>Compte</h4>
+        <hr />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compte.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compte.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compte.Solde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compte.Solde)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <h4>Products</h4>
+        <hr />
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.Label("Name")
+                </th>
+                <th>
+                    @Html.Label("Price")
+                </th>
+                <th>
+                    @Html.Label("Number")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Number)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Products", new { id = item.Id }, null) |
+                        @Html.ActionLink("Details", "Details", "Products", new { id = item.Id }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Products", new { id = item.Id }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </dl>
+</div>
+<p class="row">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="UsersTrackerClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersTrackerClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dataGridClient" Grid.Row="0" ItemsSource="{Binding Cli}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Client Firstname" Binding="{Binding Firstname}" />
+                <DataGridTextColumn Header="Client Lastname" Binding="{Binding Lastname}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="dataGridProduct" Grid.Row="1" ItemsSource="{Binding Pro}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Product Price" Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Product Number" Binding="{Binding Number}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="dataGridClientProduct" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" ItemsSource="{Binding CliPro}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Client Firstname" Binding="{Binding Client.Firstname}" />
+                <DataGridTextColumn Header="Client Lastname" Binding="{Binding Client.Lastname}" />
+                <DataGridTextColumn Header="Product Name" Binding="{Binding Product.Name}" />
+                <DataGridTextColumn Header="Product Price" Binding="{Binding Product.Price}" />
+                <DataGridTextColumn Header="Number" Binding="{Binding Number}" />
+                <DataGridTextColumn Header="Buy At" Binding="{Binding BuyAt}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btn1" Content="update" Grid.Row="2    " Click="btn1_Click" />
+        <Button Name="btn" Content="validate" Grid.Row="3" Grid.ColumnSpan="3" Click="btn_Click"/>
+    </Grid>
+</Window>

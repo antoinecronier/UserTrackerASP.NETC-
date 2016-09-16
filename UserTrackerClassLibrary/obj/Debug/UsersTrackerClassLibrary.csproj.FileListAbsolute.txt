@@ -1,0 +1,7 @@
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\bin\Debug\UserTrackerClassLibrary.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\bin\Debug\UserTrackerClassLibrary.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\obj\Debug\UserTrackerClassLibrary.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\obj\Debug\UserTrackerClassLibrary.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\obj\Debug\UsersTrackerClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\UsersTracker\UserTrackerClassLibrary\bin\Debug\Newtonsoft.Json.xml
